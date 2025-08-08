@@ -1,3 +1,5 @@
+
+
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -5,6 +7,7 @@
     --regma-bg-dark: #142939;
     --regma-bg-dark-secondary: #0B1925;
     --regma-text-light: #FBFCFA;
+    --regma-text-dark: #142939;
     --regma-accent: #33D2CD;
     --regma-purple: #3D2761;
 
@@ -16,6 +19,6 @@ body {
     color: var(--regma-text-light);
     font-family: var(--font-primary);
 
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
