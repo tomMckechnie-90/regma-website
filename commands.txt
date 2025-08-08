@@ -1,0 +1,9 @@
+npx tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch
+
+What This Command Does
+
+-i ./src/input.css: This tells Tailwind that your input file (the one you edit) is located at src/input.css.
+
+-o ./assets/css/styles.css: This tells Tailwind where to create the final output file. This is the file you link to in your HTML.
+
+--watch: This is the most important part. It tells Tailwind to keep running in the background and automatically rebuild your output.css file every time you save a change in your HTML or input.css files.

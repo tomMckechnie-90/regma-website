@@ -4,10 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
+    /* Backgrounds */
     --regma-bg-dark: #142939;
     --regma-bg-dark-secondary: #0B1925;
+    /* Text */
     --regma-text-light: #FBFCFA;
     --regma-text-dark: #142939;
+    /* Accents */
     --regma-accent: #33D2CD;
     --regma-purple: #3D2761;
 
@@ -22,3 +25,4 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
