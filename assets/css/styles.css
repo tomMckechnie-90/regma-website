@@ -15,6 +15,7 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
     --text-sm: 0.875rem;
@@ -328,6 +329,9 @@
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
   .flex-shrink {
     flex-shrink: 1;
   }
@@ -454,6 +458,9 @@
   }
   .bg-\[var\(--reg\)\] {
     background-color: var(--reg);
+  }
+  .bg-\[var\(--regam\)\] {
+    background-color: var(--regam);
   }
   .bg-\[var\(--regma-accent\)\] {
     background-color: var(--regma-accent);
@@ -789,6 +796,11 @@
   .md\:p-12 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:py-3 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 3);
     }
   }
   .md\:py-32 {
