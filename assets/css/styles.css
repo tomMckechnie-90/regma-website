@@ -206,8 +206,14 @@
     white-space: nowrap;
     border-width: 0;
   }
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
+  }
+  .relative {
+    position: relative;
   }
   .sticky {
     position: sticky;
@@ -220,6 +226,12 @@
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
+  }
+  .z-0 {
+    z-index: 0;
+  }
+  .z-10 {
+    z-index: 10;
   }
   .z-50 {
     z-index: 50;
@@ -465,6 +477,9 @@
   .bg-\[\(\)\] {
     background-color: ();
   }
+  .bg-\[url\] {
+    background-color: url;
+  }
   .bg-\[var\(\)\] {
     background-color: var();
   }
@@ -504,6 +519,36 @@
       background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
     }
   }
+  .bg-black\/60 {
+    background-color: color-mix(in srgb, #000 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
+    }
+  }
+  .bg-\[url\(\)\] {
+    background-image: url();
+  }
+  .bg-\[url\(ass\)\] {
+    background-image: url(ass);
+  }
+  .bg-\[url\(assets\)\] {
+    background-image: url(assets);
+  }
+  .bg-\[url\(assets\/\)\] {
+    background-image: url(assets/);
+  }
+  .bg-\[url\(assets\/images\/\)\] {
+    background-image: url(assets/images/);
+  }
+  .bg-\[url\(assets\/images\/logo\.png\)\] {
+    background-image: url(assets/images/logo.png);
+  }
+  .bg-\[url\(assets\/images\/wo\)\] {
+    background-image: url(assets/images/wo);
+  }
+  .bg-\[url\(assets\/images\/working\)\] {
+    background-image: url(assets/images/working);
+  }
   .object-cover {
     object-fit: cover;
   }
@@ -542,6 +587,9 @@
   }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
+  }
+  .py-32 {
+    padding-block: calc(var(--spacing) * 32);
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
@@ -868,6 +916,11 @@
   .md\:py-40 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 40);
+    }
+  }
+  .md\:py-48 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 48);
     }
   }
   .md\:text-left {

@@ -76,8 +76,14 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="text-center py-20 md:py-32 px-6">
-            <div class="container mx-auto">
+        <section class="relative flex items-center justify-center text-center px-6 py-32 md:py-48">
+
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/services-hero.png" alt="A modern and professional web design workspace"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/60"></div> <!-- Dark Overlay -->
+            </div>
+            <div class="relative z-10 container mx-auto">
                 <h1 class="text-4xl md:text-6xl font-bold text-[var(--regma-accent)] leanding-tight mb-4">
                     Simple, All-in-one Pricing
                 </h1>
