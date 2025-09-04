@@ -13,7 +13,8 @@
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
             <div>
-                <a href="index.html"><img src="assets/images/logo.png" alt="Regma Web Design Logo" class="h-12 w-auto"></a>
+                <a href="index.html"><img src="assets/images/logo.png" alt="Regma Web Design Logo"
+                        class="h-12 w-auto"></a>
             </div>
 
             <!-- Nav links (Desktop) -->
@@ -99,26 +100,46 @@
                 </a>
             </div>
         </section>
-
-        <!-- <section class="text-center py24 md:py-40 px-6">
-            <div class="container mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold text-[var(--regma-accent)] leading-tight mb-4">
-                    The complete website solution for your Business.
-                </h1>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                    Based in Sheffield, I work with you one-on-one to build a website that truly represents your
-                    business. Forget the stress of domains, hosting, and code I handle all the technical details so you
-                    can get back to what you do best.
-                </p>
-                <a href="contact.html"
-                    class="bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold py-3 px-8 rounded-lg text-lg inline-block transition-transform hover:scale-105">
-                    Get a Free Quote
-                </a>
-            </div>
-        </section> -->
         <!-- Services Overview -->
+        
+        <!-- Why choose Regma Section -->
+        <section class="bg-[var(--regma-bg-dark-secondary)] pt-20 pb-20 px-6">
+            <div class="container mx-auto flex flex-col lg:flex-row gap-12 items-center">
+                <div class="w-full lg:w-1/2">
+                    <img src="https://placehold.co/600x400/142939/33D2CD?text=Local+Sheffield+Developer"
+                        alt="A developer working in a local Sheffield setting" class="rounded-lg shadow-2xl w-full">
+                </div>
+                <div class="w-full lg:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-[var(--regma-accent)] mb-4">Why Choose Regma?</h2>
+                    <p class="text-gray-300 mb-6">
+                        Working with Regma is like teaming up with a business that understands your needs. You are not just
+                        hiring a developer, you are hiring a partner.
+                    </p>
+                    <ul class="space-y-4 text-gray-300 text-left">
+                        <li class="flex items-start"><svg class="w-6 h-6 text-[var(--regma-accent)] mr-3 flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg><span><strong>No Jargon, Just Answers:</strong> I speak your language and provide
+                                clear, honest advice.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 text-[var(--regma-accent)] mr-3 flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg><span><strong>Transparent Pricing:</strong> The price you see is the price you pay. No
+                                hidden costs or surprises.</span></li>
+                        <li class="flex items-start"><svg class="w-6 h-6 text-[var(--regma-accent)] mr-3 flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg><span><strong>Dedicated Support:</strong> When you need help, you'll be speaking
+                                directly to me, the person who built your website.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section class="bg-[var(--regma-bg-dark-secondary)] py-20 px-6">
-            <div class="container mx-auto grid lg:grid-cols-3 gap-8 text-center">
+            <div class="container mx-auto grid md:grid-cols-3 gap-8 text-center">
                 <!-- Card 1 -->
                 <div class="bg-[var(--regma-bg-dark)] p-4 lg:p-6 rounded-lg border-2 border-[var(--regma-accent)]">
                     <div class="bg-[var(--regma-accent)] inline-block p-4 rounded-full mb-12 mt-8">
@@ -168,7 +189,7 @@
         </section>
         <!-- Featured Project Section -->
         <section class="py-20 px-6">
-            <div class="container mx-auto flex flex-col lg:flex-row gap-12 items center">
+            <div class="container mx-auto flex flex-col lg:flex-row-reverse gap-12 items center">
                 <!-- Image -->
                 <div class="w-full lg:w-1/2">
                     <img src="assets/images/Broomsticks.png" loading="lazy"
@@ -209,8 +230,8 @@
         <!-- CTA Section -->
         <section class="text-center py-24 px-6">
             <div class="container mx-auto">
-                <svg class="w-16 h-16 lg:w-30 lg:h-30 text-[var(--regma-accent)] mx-auto mb-6" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-16 h-16 lg:w-30 lg:h-30 text-[var(--regma-accent)] mx-auto mb-6" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
                     </path>
@@ -222,7 +243,7 @@
                     Let's have a friendly, no-obligation chat about how I can help your business shine online.
                 </p>
                 <a href="contact.html"
-                    class="bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold py-3 px-3 rounded-lg text-lg inline-block transition-transform hover:scale-105">
+                    class="bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold py-4 px-10 rounded-lg text-xl inline-block transition-transform hover:scale-105">
                     Let's Chat
                 </a>
             </div>
@@ -235,7 +256,8 @@
                 <div class="space-x-4">
                     <div>
                         <h5 class="text-lg font-bold text-white">Get in touch</h5>
-                        <a href="mailto:thomas@regmawebdesign.co.uk" class="text-gray-400 hover:text-white">thomas@regmawebdesign.co.uk</a>
+                        <a href="mailto:thomas@regmawebdesign.co.uk"
+                            class="text-gray-400 hover:text-white">thomas@regmawebdesign.co.uk</a>
                         <br>
                         <a href="tel:07949475222" class="text-gray-400 hover:text-white">07949 475222</a>
                     </div>
@@ -256,9 +278,10 @@
                 <div>
                     <h5 class="text-lg font-bold text-white mb-2">Connect</h5>
                     <div class="flex space-x-4 justify-center">
-                        
+
                         <!-- Facebook -->
-                        <a href="https://www.facebook.com/profile.php?id=61577291690501" class="text-gray-400 hover:text-white transition" target="_blank">
+                        <a href="https://www.facebook.com/profile.php?id=61577291690501"
+                            class="text-gray-400 hover:text-white transition" target="_blank">
                             <span class="sr-only">Facebook</span>
                             <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -267,7 +290,8 @@
                             </svg>
                         </a>
                         <!-- Instagram -->
-                        <a href="https://www.instagram.com/regma_webdesign/" class="text-gray-400 hover:text-white transition" target="_blank">
+                        <a href="https://www.instagram.com/regma_webdesign/"
+                            class="text-gray-400 hover:text-white transition" target="_blank">
                             <span class="sr-only">Instagram</span>
                             <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -276,7 +300,8 @@
                             </svg>
                         </a>
                         <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/company/regma-web-design/" class="text-gray-400 hover:text-white transition" target="_blank">
+                        <a href="https://www.linkedin.com/company/regma-web-design/"
+                            class="text-gray-400 hover:text-white transition" target="_blank">
                             <span class="sr-only">LinkedIn</span>
                             <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
