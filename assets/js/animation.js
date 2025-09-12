@@ -1,4 +1,4 @@
-
+const cards = document.querySelectorAll('.card-slide');
 
 document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector('.animate-section')
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Animation for the list item, staggered.
             listItems.forEach((li, i) => {
                 setTimeout(() => {
-                li.classList.remove('opacity-0', 'translate-y-8');
-                li.classList.add('opacity-100', 'translate-y-0');
-            }, 900 + i * 200); // 900ms for the 1st list item then +200ms added on for each item after
+                    li.classList.remove('opacity-0', 'translate-y-8');
+                    li.classList.add('opacity-100', 'translate-y-0');
+                }, 900 + i * 200); // 900ms for the 1st list item then +200ms added on for each item after
             });
         }
     }
@@ -44,3 +44,25 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', animateWhySection)
     animateWhySection();
 })
+
+// Card Animation
+function animateCards() {
+    const cardSection = document.querySelector('.card-section') // Select the grid container with cards
+    if (!cardSection || cardSection.classList.contains('animated')) return;
+
+    const rect = cardSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+        cardSection.classList.add('animated'); // prevent re-triggering
+
+        cards.forEach((card, i) => {
+            setTimeout(() => {
+                card.classList.remove('opacity-0', '-translate-x-8');
+                card.classList.add('opacity-100', 'translate-x-0');
+            }, i * 1000) // Time delay
+        });
+    }
+
+}
+
+window.addEventListener('scroll', animateCards);
+window.addEventListener('DOMContentLoaded', animateCards);
