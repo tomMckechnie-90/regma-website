@@ -94,23 +94,23 @@
                 </p>
             </div>
         </section>
+        <section></section>
         <!-- Packages Intro Section -->
-        <section class="py-10 lg:py-12 bg-[var(--regma-bg-dark-secondary)] px-6 text-center">
+        <section class="py-10 lg:py-12 bg-[var(--regma-bg-dark-secondary)] px-6 text-center packages-intro-section">
             <div class="container mx-auto max-w-3xl">
-                <h2 class="text-2xl lg:text-5xl font-bold lg:mb-4 mb-2 text-[var(--regma-accent)]">Our Web Design
+                <h2 class="text-2xl lg:text-5xl font-bold lg:mb-4 mb-2 text-[var(--regma-accent)] opacity-0 transition-all duration-700 package-heading">Our Web Design
                     Packages</h2>
-                <p class="lg:text-xl text-sm text-gray-400">
+                <p class="lg:text-xl text-sm text-gray-400 opacity-0 transition-all duration-700 package-para">
                     Whether you're starting from scratch or need to sell products online, these all-in-one packages are
                     designed to give you a professional, stress-free start.
                 </p>
             </div>
         </section>
         <!-- Packages Section V2 -->
-        <section class="lg:pb-20 pb-10 bg-[var(--regma-bg-dark-secondary)] px-6">
+        <section class="lg:pb-20 pb-10 bg-[var(--regma-bg-dark-secondary)] px-6 packages-section">
             <div class="container mx-auto grid lg:grid-cols-2 gap-8 max-w-5xl">
                 <!-- Signature Package -->
-                <div
-                    class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-gray-700 relative overflow-hidden">
+                <div class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-gray-700 relative overflow-hidden opacity-0 -translate-x-8 transition-all duration-700 signature-card">
                     <!-- discount label -->
                     <div
                         class="absolute top-0 left-0 bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold text-sm py-1 px-8 transform -rotate-45 -translate-x-8 translate-y-4">
@@ -177,8 +177,7 @@
                 </div>
 
                 <!-- E-commerce package v1 -->
-                <div
-                    class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-[var(--regma-accent)] relative overflow-hidden">
+                <div class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-[var(--regma-accent)] relative overflow-hidden opacity-0 translate-x-8 transition-all duration-700 ecommerce-card">
                     <!-- Discount Label (temp) -->
                     <div
                         class="absolute top-0 left-0 bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold text-sm py-1 px-8 transform -rotate-45 -translate-x-8 translate-y-4">
@@ -439,6 +438,7 @@
 
     <!-- Menu JavaScript -->
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/animation.js"></script>
 </body>
 
 </html>
