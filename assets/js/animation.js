@@ -104,7 +104,7 @@ function animateProjectSection() {
 
     const rect = projectSection.getBoundingClientRect(); // This line gets the position and size of the sections viewport.
 
-    if (rect.top < window.innerHeight -100) {
+    if (rect.top < window.innerHeight - 100) {
         projectSection.classList.add('animate');
         console.log('Animating Project section.');
 
@@ -126,6 +126,72 @@ function animateProjectSection() {
 
 window.addEventListener('scroll', animateProjectSection);
 window.addEventListener('DOMContentLoaded', animateProjectSection);
+
+// Fade in animation for review Section (Index.html)
+function fadeInReviewSection() {
+    const fadeInSectionReview = document.querySelector('.fade-in-section-review');
+
+    if (!fadeInSectionReview) {
+        console.log('Fade in sections not found');
+        return;
+    }
+    if (fadeInSectionReview.classList.contains('animated')) {
+        // This section is already animated, please do not animate again.
+        return;
+    }
+
+    // Select the elements inside review section
+    const fadeInReview = fadeInSectionReview.querySelector('.fade-in-review');
+
+    const rect = fadeInSectionReview.getBoundingClientRect();
+
+    // Fade in for Review
+    if (rect.top < window.innerHeight - 100) {
+        fadeInReview.classList.add('animated');
+        console.log('Animating Fade in sections');
+
+        setTimeout(() => {
+            fadeInReview.classList.remove('opacity-0');
+            fadeInReview.classList.add('opacity-100');
+        }, 800);
+    }
+}
+
+window.addEventListener('scroll', fadeInReviewSection);
+window.addEventListener('DOMContentLoaded', fadeInReviewSection);
+
+// Fade in for CTA section (Index.html)
+function fadeInCtaSection() {
+    const fadeInSectionCta = document.querySelector('.fade-in-section-cta');
+
+    if (!fadeInSectionCta) {
+        console.log('Fade in sections not found');
+        return;
+    }
+    if (fadeInSectionCta.classList.contains('animated')) {
+        // This section is already animated, please do not animate again.
+        return;
+    }
+
+    // Select the elements inside the CTA section
+    const fadeInCta = fadeInSectionCta.querySelector('.fade-in-cta');
+
+    const rect = fadeInSectionCta.getBoundingClientRect();
+
+    // Fade in for CTA
+    if (rect.top < window.innerHeight - 100) {
+        fadeInCta.classList.add('animated');
+        console.log('Animating Fade in on CTA section');
+
+        setTimeout(() => {
+            fadeInCta.classList.remove('opacity-0');
+            fadeInCta.classList.add('opacity-100');
+        }, 800);
+    }
+}
+
+window.addEventListener('scroll', fadeInCtaSection);
+window.addEventListener('DOMContentLoaded', fadeInCtaSection)
 
 // Packages Animation (Services.html)
 function animatePackages() {
@@ -211,7 +277,7 @@ function animateCarePackage() {
             carePackageCard.classList.add('opacity-100', 'translate-x-0');
             console.log('Care Package card animated')
         }, 600);
-        
+
         // Animated care package text from the right
         setTimeout(() => {
             carePackageText.classList.remove('opacity-0', 'translate-x-8');
@@ -226,14 +292,14 @@ window.addEventListener('DOMContentLoaded', animateCarePackage);
 
 
 // Animate contact section (contact.html)
-function animateContactSection(){
+function animateContactSection() {
     const contactSection = document.querySelector('.contact-section');
     if (!contactSection) {
         console.log('Contact section not found.');
         return;
     }
 
-    if (contactSection.classList.contains('animated')){
+    if (contactSection.classList.contains('animated')) {
         // This section is already animated, please do not animate again
         return;
     }
