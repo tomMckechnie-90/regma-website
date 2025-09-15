@@ -90,7 +90,7 @@ function animatePackages() {
     const packagesIntroSection = document.querySelector('.packages-intro-section');
     const packagesSection = document.querySelector('.packages-section');
     if (!packagesIntroSection || !packagesSection) {
-        console.log('Packages sections not found.');
+        // console.log('Packages sections not found.');
     }
     if (packagesIntroSection.classList.contains('animated')) {
         // This section is already animated, please do not animate again
@@ -144,7 +144,7 @@ window.addEventListener('DOMContentLoaded', animatePackages);
 function animateCarePackage() {
     const maintenanceSection = document.querySelector('.maintenance-section');
     if (!maintenanceSection) {
-        console.log('maintenance section not found.')
+        // console.log('maintenance section not found.')
         return;
     }
     if (maintenanceSection.classList.contains('animated')) {
@@ -178,7 +178,50 @@ function animateCarePackage() {
     }
 }
 
-
-
 window.addEventListener('scroll', animateCarePackage);
 window.addEventListener('DOMContentLoaded', animateCarePackage);
+
+
+// Animate contact section (contact.html)
+function animateContactSection(){
+    const contactSection = document.querySelector('.contact-section');
+    if (!contactSection) {
+        console.log('Contact section not found.');
+        return;
+    }
+
+    if (contactSection.classList.contains('animated')){
+        // This section is already animated, please do not animate again
+        return;
+    }
+
+    // Select elements from the contact-section
+    const contactInfo = contactSection.querySelector('.contact-info');
+    const contactForm = contactSection.querySelector('.contact-form');
+
+    const rect = contactSection.getBoundingClientRect(); // This line gets the position and size of the sections viewport.
+
+    if (rect.top < window.innerHeight - 100) {
+        contactSection.classList.add('animated');
+        console.log('Animating contact section');
+
+        // Animate contact-info from the left
+        setTimeout(() => {
+            contactInfo.classList.remove('opacity-0', '-translate-x-8');
+            contactInfo.classList.add('opacity-100', 'translate-x-0');
+
+            console.log('Contact info animated.');
+        }, 600);
+
+        // Animate contact-form
+        setTimeout(() => {
+            contactForm.classList.remove('opacity-0', 'translate-x-8');
+            contactForm.classList.add('opacity-100', 'translate-x-0');
+
+            console.log('Contact form animated.');
+        }, 1200);
+    }
+}
+
+window.addEventListener('scroll', animateContactSection);
+window.addEventListener('DOMContentLoaded', animateContactSection);
