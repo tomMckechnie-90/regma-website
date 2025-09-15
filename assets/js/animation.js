@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.card-slide');
-
+// Why Choose regma section (Index.html)
 document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector('.animate-section')
     if (!section) {
@@ -85,14 +85,57 @@ function animateCards() {
 window.addEventListener('scroll', animateCards);
 window.addEventListener('DOMContentLoaded', animateCards);
 
+// Featured Project Section (Index.html)
+
+function animateProjectSection() {
+    const projectSection = document.querySelector('.project-section');
+    if (!projectSection) {
+        console.log('Project section not found.')
+        return;
+    }
+    if (projectSection.classList.contains('animated')) {
+        // This section is already animated, please do not animate again
+        return;
+    }
+
+    // Select the elements from the Featured project section
+    const projectImg = projectSection.querySelector('.project-img');
+    const projectText = projectSection.querySelector('.project-text');
+
+    const rect = projectSection.getBoundingClientRect(); // This line gets the position and size of the sections viewport.
+
+    if (rect.top < window.innerHeight -100) {
+        projectSection.classList.add('animate');
+        console.log('Animating Project section.');
+
+        // Animate project text from the left
+        setTimeout(() => {
+            projectText.classList.remove('opacity-0', '-translate-x-8');
+            projectText.classList.add('opacity-100', 'translate-x-0');
+            console.log('Project text animated.')
+        }, 600);
+
+        // Animate project img from the right
+        setTimeout(() => {
+            projectImg.classList.remove('opacity-0', 'translate-x-8');
+            projectImg.classList.add('opacity-100', 'translate-x-0');
+            console.log('Project img animated.')
+        }, 1200);
+    }
+}
+
+window.addEventListener('scroll', animateProjectSection);
+window.addEventListener('DOMContentLoaded', animateProjectSection);
+
 // Packages Animation (Services.html)
 function animatePackages() {
     const packagesIntroSection = document.querySelector('.packages-intro-section');
     const packagesSection = document.querySelector('.packages-section');
     if (!packagesIntroSection || !packagesSection) {
         // console.log('Packages sections not found.');
+        return;
     }
-    if (packagesIntroSection.classList.contains('animated')) {
+    if (packagesSection.classList.contains('animated')) {
         // This section is already animated, please do not animate again
         return;
     }
