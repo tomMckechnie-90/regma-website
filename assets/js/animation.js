@@ -1,4 +1,38 @@
 const cards = document.querySelectorAll('.card-slide');
+
+// Fade in for CTA sections
+function fadeInCtaSection() {
+    const fadeInSectionCta = document.querySelector('.fade-in-section-cta');
+
+    if (!fadeInSectionCta) {
+        console.log('Fade in sections not found');
+        return;
+    }
+    if (fadeInSectionCta.classList.contains('animated')) {
+        // This section is already animated, please do not animate again.
+        return;
+    }
+
+    // Select the elements inside the CTA section
+    const fadeInCta = fadeInSectionCta.querySelector('.fade-in-cta');
+
+    const rect = fadeInSectionCta.getBoundingClientRect();
+
+    // Fade in for CTA
+    if (rect.top < window.innerHeight - 100) {
+        fadeInCta.classList.add('animated');
+        console.log('Animating Fade in on CTA section');
+
+        setTimeout(() => {
+            fadeInCta.classList.remove('opacity-0');
+            fadeInCta.classList.add('opacity-100');
+        }, 800);
+    }
+}
+
+window.addEventListener('scroll', fadeInCtaSection);
+window.addEventListener('DOMContentLoaded', fadeInCtaSection)
+
 // Why Choose regma section (Index.html)
 document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector('.animate-section')
@@ -160,38 +194,7 @@ function fadeInReviewSection() {
 window.addEventListener('scroll', fadeInReviewSection);
 window.addEventListener('DOMContentLoaded', fadeInReviewSection);
 
-// Fade in for CTA section (Index.html)
-function fadeInCtaSection() {
-    const fadeInSectionCta = document.querySelector('.fade-in-section-cta');
 
-    if (!fadeInSectionCta) {
-        console.log('Fade in sections not found');
-        return;
-    }
-    if (fadeInSectionCta.classList.contains('animated')) {
-        // This section is already animated, please do not animate again.
-        return;
-    }
-
-    // Select the elements inside the CTA section
-    const fadeInCta = fadeInSectionCta.querySelector('.fade-in-cta');
-
-    const rect = fadeInSectionCta.getBoundingClientRect();
-
-    // Fade in for CTA
-    if (rect.top < window.innerHeight - 100) {
-        fadeInCta.classList.add('animated');
-        console.log('Animating Fade in on CTA section');
-
-        setTimeout(() => {
-            fadeInCta.classList.remove('opacity-0');
-            fadeInCta.classList.add('opacity-100');
-        }, 800);
-    }
-}
-
-window.addEventListener('scroll', fadeInCtaSection);
-window.addEventListener('DOMContentLoaded', fadeInCtaSection)
 
 // Packages Animation (Services.html)
 function animatePackages() {
@@ -334,3 +337,46 @@ function animateContactSection() {
 
 window.addEventListener('scroll', animateContactSection);
 window.addEventListener('DOMContentLoaded', animateContactSection);
+
+// Animate portfolio section (Portfolio.html)
+function animatePortfolioSection() {
+    const portfolioSection = document.querySelector('.portfolio-section');
+
+    if (!portfolioSection) {
+        console.log('Portfolio section not found.');
+        return;
+    }
+    if (portfolioSection.classList.contains('animated')) {
+        // This section has already been animated, please do not animate again.
+        return;
+    }
+
+    // Select the elements in portfolio section
+    const cardOne = portfolioSection.querySelector('.card-one');
+    const cardTwo = portfolioSection.querySelector('.card-two');
+
+    const rect = portfolioSection.getBoundingClientRect(); // This line gets the position and size of the sections viewport
+
+    if (rect.top < window.innerHeight - 100) {
+        portfolioSection.classList.add('animated');
+        console.log('Animating portfolio section.');
+        // Animate card one from the left
+        setTimeout(() => {
+            cardOne.classList.remove('opacity-0', '-translate-x-8');
+            cardOne.classList.add('opacity-100', 'translate-x-0');
+            console.log('Card one animated');
+        }, 600);
+
+        // Animate card two from the right
+        setTimeout(() => {
+            cardTwo.classList.remove('opacity-0', 'translate-x-8');
+            cardTwo.classList.add('opacity-100', 'translate-x-0');
+            console.log('Card one animated');
+        }, 1200);
+
+    }
+}
+
+window.addEventListener('scroll', animatePortfolioSection);
+window.addEventListener('DOMContentLoaded', animatePortfolioSection);
+
