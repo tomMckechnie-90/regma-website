@@ -95,10 +95,10 @@
             </div>
         </section>
 
-        <section class="bg-[var(--regma-bg-dark-secondary)] py-20 px-6">
+        <section class="bg-[var(--regma-bg-dark-secondary)] py-20 px-6 case-study-section">
             <div class="container mx-auto grid md:grid-cols-2 gap-8">
 
-                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-xl border-4 border-[var(--regma-accent)]">
+                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-xl border-4 border-[var(--regma-accent)] case-study-card-one opacity-0 -translate-x-8 transition-all duration-700">
                     <div class="bg-[var(--regma-accent)] inline-block p-3 rounded-full mb-4">
                         <svg class="w-6 h-6 text-[var(--regma-text-dark)]" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-lg border-4 border-[var(--regma-accent)]">
+                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-lg border-4 border-[var(--regma-accent)] case-study-card-two opacity-0 translate-x-8 transition-all duration-700">
                     <div class="bg-[var(--regma-accent)] inline-block p-3 rounded-full mb-4">
                         <svg class="w-6 h-6 text-[var(--regma-text-dark)]" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +148,7 @@
                     </p>
                 </div>
 
-                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-lg border-4 border-[var(--regma-accent)]">
+                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-lg border-4 border-[var(--regma-accent)] case-study-card-three opacity-0 -translate-x-8 transition-all duration-700">
                     <div class="bg-[var(--regma-accent)] inline-block p-3 rounded-full mb-4">
                         <svg class="w-6 h-6 text-[var(--regma-text-dark)]" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +167,7 @@
                     </p>
                 </div>
 
-                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-lg border-4 border-[var(--regma-accent)]">
+                <div class="bg-[var(--regma-bg-dark)] p-8 rounded-lg shadow-lg border-4 border-[var(--regma-accent)] case-study-card-four opacity-0 translate-x-8 transition-all duration-700">
                     <!-- Icon for The Results -->
                     <div class="bg-[var(--regma-accent)] inline-block p-3 rounded-full mb-4">
                         <svg class="w-6 h-6 text-[var(--regma-text-dark)]" fill="none" stroke="currentColor"
@@ -188,8 +188,8 @@
             </div>
         </section>
         <!-- CTA Section -->
-        <section class="text-center py-24 px-6">
-            <div class="container mx-auto">
+        <section class="text-center py-24 px-6 fade-in-section-cta">
+            <div class="container mx-auto fade-in-cta opacity-0 transition-all duration-700">
                 <h2 class="text-2xl lg:text-4xl font-bold text-[var(--regma-accent)] mb-4">Ready for a website that
                     grows your business?</h2>
                 <p class="text-sm lg:text-xl text-gray-300 mx-w-3xl mx-auto mb-8">
@@ -274,6 +274,7 @@
 
     <!-- Menu JavaScript -->
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/animation.js"></script>
 </body>
 
 </html>

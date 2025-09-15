@@ -380,3 +380,63 @@ function animatePortfolioSection() {
 window.addEventListener('scroll', animatePortfolioSection);
 window.addEventListener('DOMContentLoaded', animatePortfolioSection);
 
+// Animate case study section (Case-study.html)
+function animateCaseStudySection() {
+    const caseStudySection = document.querySelector('.case-study-section');
+
+    if (!caseStudySection) {
+        console.log('Case study section not found.');
+        return;
+    }
+    if (caseStudySection.classList.contains('animated')){
+        // This section has already been animated, please do not animate again
+        return;
+    }
+
+    // Select elements in the case study section
+    const caseStudyCardOne = caseStudySection.querySelector('.case-study-card-one');
+    const caseStudyCardTwo = caseStudySection.querySelector('.case-study-card-two');
+    const caseStudyCardThree = caseStudySection.querySelector('.case-study-card-three');
+    const caseStudyCardFour = caseStudySection.querySelector('.case-study-card-four');
+
+    const rect = caseStudySection.getBoundingClientRect(); // This line gets the position and size in sections viewport
+
+    if (rect.top < window.innerHeight -100) {
+        caseStudySection.classList.add('animated');
+        console.log('Animating case study section');
+
+        // Animations for cards one-four with time delay
+
+        // Card one
+        setTimeout(() => {
+            caseStudyCardOne.classList.remove('opacity-0', '-translate-x-8');
+            caseStudyCardOne.classList.add('opacity-100', 'translate-x-0');
+            console.log('Card one animated');
+        }, 600);
+
+        // Card two
+        setTimeout(() => {
+            caseStudyCardTwo.classList.remove('opacity-0', 'translate-x-8');
+            caseStudyCardTwo.classList.add('opacity-100', 'translate-x-0');
+            console.log('Card two animated');
+        }, 1200);
+
+        // Card three
+        setTimeout(() => {
+            caseStudyCardThree.classList.remove('opacity-0', '-translate-x-8');
+            caseStudyCardThree.classList.add('opacity-100', 'translate-x-0');
+            console.log('Card three animated');
+        }, 1700);
+
+        // Card four
+        setTimeout(() => {
+            caseStudyCardFour.classList.remove('opacity-0', 'translate-x-8');
+            caseStudyCardFour.classList.add('opacity-100', 'translate-x-0');
+            console.log('Card four animated');
+        }, 2300);
+    }
+}
+
+window.addEventListener('scroll', animateCaseStudySection);
+window.addEventListener('DOMContentLoaded', animateCaseStudySection);
+
