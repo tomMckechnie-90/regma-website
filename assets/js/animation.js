@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!section) {
         // console.log('No. .animate-section found.')
         return;
-    } 
+    }
 
     const img = section.querySelector('.animate-img');
     const header = section.querySelector('.animate-header');
@@ -107,16 +107,16 @@ function animatePackages() {
 
     if (rect.top < window.innerHeight - 100) {
         packagesIntroSection.classList.add('animated');
-        packagesSection.classList.add('animated'); 
+        packagesSection.classList.add('animated');
         console.log('Animating packages intro section and cards section.');
 
         // Adds opacity to the package-sections heading & paragraphs for fade in effect
         setTimeout(() => {
-        heading.classList.remove('opacity-0');
-        heading.classList.add('opacity-100');
-        para.classList.remove('opacity-0');
-        para.classList.add('opacity-100');
-        console.log('Heading and Paragraph elements animated.');
+            heading.classList.remove('opacity-0');
+            heading.classList.add('opacity-100');
+            para.classList.remove('opacity-0');
+            para.classList.add('opacity-100');
+            console.log('Heading and Paragraph elements animated.');
         }, 600)
 
 
@@ -138,3 +138,47 @@ function animatePackages() {
 
 window.addEventListener('scroll', animatePackages);
 window.addEventListener('DOMContentLoaded', animatePackages);
+
+
+// Care Package Animation (Services.html)
+function animateCarePackage() {
+    const maintenanceSection = document.querySelector('.maintenance-section');
+    if (!maintenanceSection) {
+        console.log('maintenance section not found.')
+        return;
+    }
+    if (maintenanceSection.classList.contains('animated')) {
+        // This section is already animated, please do not animate again
+        return;
+    }
+
+    // Select the elements in maintenance-section
+    const carePackageCard = maintenanceSection.querySelector('.care-package-card');
+    const carePackageText = maintenanceSection.querySelector('.care-package-text');
+
+    const rect = maintenanceSection.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+        maintenanceSection.classList.add('animated');
+        console.log('Animating Maintenance section');
+
+        // Animate care package card from the left
+        setTimeout(() => {
+            carePackageCard.classList.remove('opacity-0', '-translate-x-8');
+            carePackageCard.classList.add('opacity-100', 'translate-x-0');
+            console.log('Care Package card animated')
+        }, 600);
+        
+        // Animated care package text from the right
+        setTimeout(() => {
+            carePackageText.classList.remove('opacity-0', 'translate-x-8');
+            carePackageText.classList.add('opacity-100', 'translate-x-0');
+            console.log('Care Package text animated')
+        }, 1200);
+    }
+}
+
+
+
+window.addEventListener('scroll', animateCarePackage);
+window.addEventListener('DOMContentLoaded', animateCarePackage);
