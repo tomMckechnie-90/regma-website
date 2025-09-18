@@ -196,7 +196,7 @@ function animatedSections() {
 window.addEventListener('scroll', animatedSections);
 window.addEventListener('DOMContentLoaded', animatedSections);
 
-// Fade in Animations
+// Fade in Animations (Desktop)
 function fadeInSections() {
     const fadeInSections = document.querySelectorAll('.fade-in-section');
     console.log('fadeInSections NodeList:', fadeInSections);
