@@ -1,38 +1,5 @@
 const cards = document.querySelectorAll('.card-slide');
 
-// Fade in for CTA sections
-function fadeInCtaSection() {
-    const fadeInSectionCta = document.querySelector('.fade-in-section-cta');
-
-    if (!fadeInSectionCta) {
-        console.log('Fade in sections not found');
-        return;
-    }
-    if (fadeInSectionCta.classList.contains('animated')) {
-        // This section is already animated, please do not animate again.
-        return;
-    }
-
-    // Select the elements inside the CTA section
-    const fadeInCta = fadeInSectionCta.querySelector('.fade-in-cta');
-
-    const rect = fadeInSectionCta.getBoundingClientRect();
-
-    // Fade in for CTA
-    if (rect.top < window.innerHeight - 100) {
-        fadeInCta.classList.add('animated');
-        console.log('Animating Fade in on CTA section');
-
-        setTimeout(() => {
-            fadeInCta.classList.remove('opacity-0');
-            fadeInCta.classList.add('opacity-100');
-        }, 800);
-    }
-}
-
-window.addEventListener('scroll', fadeInCtaSection);
-window.addEventListener('DOMContentLoaded', fadeInCtaSection)
-
 // Why Choose regma section (Index.html)
 document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector('.animate-section')
@@ -119,267 +86,6 @@ function animateCards() {
 window.addEventListener('scroll', animateCards);
 window.addEventListener('DOMContentLoaded', animateCards);
 
-// Featured Project Section (Index.html)
-
-function animateProjectSection() {
-    const projectSection = document.querySelector('.project-section');
-    if (!projectSection) {
-        console.log('Project section not found.')
-        return;
-    }
-    if (projectSection.classList.contains('animated')) {
-        // This section is already animated, please do not animate again
-        return;
-    }
-
-    // Select the elements from the Featured project section
-    const projectImg = projectSection.querySelector('.project-img');
-    const projectText = projectSection.querySelector('.project-text');
-
-    const rect = projectSection.getBoundingClientRect(); // This line gets the position and size of the sections viewport.
-
-    if (rect.top < window.innerHeight - 100) {
-        projectSection.classList.add('animate');
-        console.log('Animating Project section.');
-
-        // Animate project text from the left
-        setTimeout(() => {
-            projectText.classList.remove('opacity-0', '-translate-x-8');
-            projectText.classList.add('opacity-100', 'translate-x-0');
-            console.log('Project text animated.')
-        }, 600);
-
-        // Animate project img from the right
-        setTimeout(() => {
-            projectImg.classList.remove('opacity-0', 'translate-x-8');
-            projectImg.classList.add('opacity-100', 'translate-x-0');
-            console.log('Project img animated.')
-        }, 1200);
-    }
-}
-
-window.addEventListener('scroll', animateProjectSection);
-window.addEventListener('DOMContentLoaded', animateProjectSection);
-
-// Fade in animation for review Section (Index.html)
-function fadeInReviewSection() {
-    const fadeInSectionReview = document.querySelector('.fade-in-section-review');
-
-    if (!fadeInSectionReview) {
-        console.log('Fade in sections not found');
-        return;
-    }
-    if (fadeInSectionReview.classList.contains('animated')) {
-        // This section is already animated, please do not animate again.
-        return;
-    }
-
-    // Select the elements inside review section
-    const fadeInReview = fadeInSectionReview.querySelector('.fade-in-review');
-
-    const rect = fadeInSectionReview.getBoundingClientRect();
-
-    // Fade in for Review
-    if (rect.top < window.innerHeight - 100) {
-        fadeInReview.classList.add('animated');
-        console.log('Animating Fade in sections');
-
-        setTimeout(() => {
-            fadeInReview.classList.remove('opacity-0');
-            fadeInReview.classList.add('opacity-100');
-        }, 800);
-    }
-}
-
-window.addEventListener('scroll', fadeInReviewSection);
-window.addEventListener('DOMContentLoaded', fadeInReviewSection);
-
-
-
-// Packages Animation (Services.html)
-function animatePackages() {
-    const packagesIntroSection = document.querySelector('.packages-intro-section');
-    const packagesSection = document.querySelector('.packages-section');
-    if (!packagesIntroSection || !packagesSection) {
-        // console.log('Packages sections not found.');
-        return;
-    }
-    if (packagesSection.classList.contains('animated')) {
-        // This section is already animated, please do not animate again
-        return;
-    }
-
-    // Selectors (This grabs all your HTML classes from services.html .packages-section)
-    const heading = packagesIntroSection.querySelector('.package-heading');
-    const para = packagesIntroSection.querySelector('.package-para');
-    const signature = packagesSection.querySelector('.signature-card');
-    const ecommerce = packagesSection.querySelector('.ecommerce-card');
-
-    const rect = packagesIntroSection.getBoundingClientRect();
-
-    if (rect.top < window.innerHeight - 100) {
-        packagesIntroSection.classList.add('animated');
-        packagesSection.classList.add('animated');
-        console.log('Animating packages intro section and cards section.');
-
-        // Adds opacity to the package-sections heading & paragraphs for fade in effect
-        setTimeout(() => {
-            heading.classList.remove('opacity-0');
-            heading.classList.add('opacity-100');
-            para.classList.remove('opacity-0');
-            para.classList.add('opacity-100');
-            console.log('Heading and Paragraph elements animated.');
-        }, 600)
-
-
-        // Signature card comes in from the left
-        setTimeout(() => {
-            signature.classList.remove('opacity-0', '-translate-x-8');
-            signature.classList.add('opacity-100', 'translate-x-0');
-            console.log('Signature card animated.')
-        }, 1200);
-
-        // Ecommerce card comes in from the right
-        setTimeout(() => {
-            ecommerce.classList.remove('opacity-0', 'translate-x-8');
-            ecommerce.classList.add('opacity-100', 'translate-x-0');
-            console.log('Ecommerce card animated.')
-        }, 1700);
-    }
-}
-
-window.addEventListener('scroll', animatePackages);
-window.addEventListener('DOMContentLoaded', animatePackages);
-
-
-// Care Package Animation (Services.html)
-function animateCarePackage() {
-    const maintenanceSection = document.querySelector('.maintenance-section');
-    if (!maintenanceSection) {
-        // console.log('maintenance section not found.')
-        return;
-    }
-    if (maintenanceSection.classList.contains('animated')) {
-        // This section is already animated, please do not animate again
-        return;
-    }
-
-    // Select the elements in maintenance-section
-    const carePackageCard = maintenanceSection.querySelector('.care-package-card');
-    const carePackageText = maintenanceSection.querySelector('.care-package-text');
-
-    const rect = maintenanceSection.getBoundingClientRect();
-
-    if (rect.top < window.innerHeight - 100) {
-        maintenanceSection.classList.add('animated');
-        console.log('Animating Maintenance section');
-
-        // Animate care package card from the left
-        setTimeout(() => {
-            carePackageCard.classList.remove('opacity-0', '-translate-x-8');
-            carePackageCard.classList.add('opacity-100', 'translate-x-0');
-            console.log('Care Package card animated')
-        }, 600);
-
-        // Animated care package text from the right
-        setTimeout(() => {
-            carePackageText.classList.remove('opacity-0', 'translate-x-8');
-            carePackageText.classList.add('opacity-100', 'translate-x-0');
-            console.log('Care Package text animated')
-        }, 1200);
-    }
-}
-
-window.addEventListener('scroll', animateCarePackage);
-window.addEventListener('DOMContentLoaded', animateCarePackage);
-
-
-// Animate contact section (contact.html)
-function animateContactSection() {
-    const contactSection = document.querySelector('.contact-section');
-    if (!contactSection) {
-        console.log('Contact section not found.');
-        return;
-    }
-
-    if (contactSection.classList.contains('animated')) {
-        // This section is already animated, please do not animate again
-        return;
-    }
-
-    // Select elements from the contact-section
-    const contactInfo = contactSection.querySelector('.contact-info');
-    const contactForm = contactSection.querySelector('.contact-form');
-
-    const rect = contactSection.getBoundingClientRect(); // This line gets the position and size of the sections viewport.
-
-    if (rect.top < window.innerHeight - 100) {
-        contactSection.classList.add('animated');
-        console.log('Animating contact section');
-
-        // Animate contact-info from the left
-        setTimeout(() => {
-            contactInfo.classList.remove('opacity-0', '-translate-x-8');
-            contactInfo.classList.add('opacity-100', 'translate-x-0');
-
-            console.log('Contact info animated.');
-        }, 600);
-
-        // Animate contact-form
-        setTimeout(() => {
-            contactForm.classList.remove('opacity-0', 'translate-x-8');
-            contactForm.classList.add('opacity-100', 'translate-x-0');
-
-            console.log('Contact form animated.');
-        }, 1200);
-    }
-}
-
-window.addEventListener('scroll', animateContactSection);
-window.addEventListener('DOMContentLoaded', animateContactSection);
-
-// Animate portfolio section (Portfolio.html)
-function animatePortfolioSection() {
-    const portfolioSection = document.querySelector('.portfolio-section');
-
-    if (!portfolioSection) {
-        console.log('Portfolio section not found.');
-        return;
-    }
-    if (portfolioSection.classList.contains('animated')) {
-        // This section has already been animated, please do not animate again.
-        return;
-    }
-
-    // Select the elements in portfolio section
-    const cardOne = portfolioSection.querySelector('.card-one');
-    const cardTwo = portfolioSection.querySelector('.card-two');
-
-    const rect = portfolioSection.getBoundingClientRect(); // This line gets the position and size of the sections viewport
-
-    if (rect.top < window.innerHeight - 100) {
-        portfolioSection.classList.add('animated');
-        console.log('Animating portfolio section.');
-        // Animate card one from the left
-        setTimeout(() => {
-            cardOne.classList.remove('opacity-0', '-translate-x-8');
-            cardOne.classList.add('opacity-100', 'translate-x-0');
-            console.log('Card one animated');
-        }, 600);
-
-        // Animate card two from the right
-        setTimeout(() => {
-            cardTwo.classList.remove('opacity-0', 'translate-x-8');
-            cardTwo.classList.add('opacity-100', 'translate-x-0');
-            console.log('Card one animated');
-        }, 1200);
-
-    }
-}
-
-window.addEventListener('scroll', animatePortfolioSection);
-window.addEventListener('DOMContentLoaded', animatePortfolioSection);
-
 // Animate case study section (Case-study.html)
 function animateCaseStudySection() {
     const caseStudySection = document.querySelector('.case-study-section');
@@ -388,7 +94,7 @@ function animateCaseStudySection() {
         console.log('Case study section not found.');
         return;
     }
-    if (caseStudySection.classList.contains('animated')){
+    if (caseStudySection.classList.contains('animated')) {
         // This section has already been animated, please do not animate again
         return;
     }
@@ -401,7 +107,7 @@ function animateCaseStudySection() {
 
     const rect = caseStudySection.getBoundingClientRect(); // This line gets the position and size in sections viewport
 
-    if (rect.top < window.innerHeight -100) {
+    if (rect.top < window.innerHeight - 100) {
         caseStudySection.classList.add('animated');
         console.log('Animating case study section');
 
@@ -440,3 +146,87 @@ function animateCaseStudySection() {
 window.addEventListener('scroll', animateCaseStudySection);
 window.addEventListener('DOMContentLoaded', animateCaseStudySection);
 
+// Animations for sliding in from the left or right
+function animatedSections() {
+    const slideInSection = document.querySelectorAll('.slide-in-sections');
+    console.log('slideInSection NodeList:', slideInSection);
+    if (!slideInSection.length) {
+        // Cannot find the section do not run the function
+        console.log('Slide in animation not found');
+        return;
+    }
+    slideInSection.forEach(section => {
+        if (section.classList.contains('animated')) {
+            // This section as been animated, do not animate again.
+            return;
+        }
+
+        // Select the elements in the animated-sections
+        const slideRight = section.querySelector('.slide-right');
+        const slideLeft = section.querySelector('.slide-left');
+
+        // This line gets the postion and size of the section viewport
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight - 100) {
+            section.classList.add('animated');
+            console.log('Animation in progress');
+
+            // Slide in from the left
+            setTimeout(() => {
+                if (slideLeft) {
+                    slideLeft.classList.remove('opacity-0', '-translate-x-8');
+                    slideLeft.classList.add('opacity-100', 'translate-x-0');
+                    console.log('slide in left animated.');
+                }
+            }, 1200);
+
+            // slide in from the right
+            setTimeout(() => {
+                if (slideRight) {
+                slideRight.classList.remove('opacity-0', 'translate-x-8');
+                slideRight.classList.add('opacity-100', 'translate-x-0');
+                console.log('slide in right animated.');
+                }
+            }, 600);
+        }
+    });
+}
+
+window.addEventListener('scroll', animatedSections);
+window.addEventListener('DOMContentLoaded', animatedSections);
+
+// Fade in Animations
+function fadeInSections() {
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+    console.log('fadeInSections NodeList:', fadeInSections);
+    if(!fadeInSections.length) {
+        console.log('Fade in animation not found');
+        return;
+    }
+    fadeInSections.forEach(section => {
+        if (section.classList.contains('animated')) {
+            return;
+        }
+
+        const fadeIn = section.querySelector('.fade-in');
+
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight -100){
+            section.classList.add('animated');
+            
+
+            setTimeout (() => {
+                if (fadeIn) {
+                    fadeIn.classList.remove('opacity-0');
+                    fadeIn.classList.add('opacity-100');
+                    console.log('fade in animated.');
+                }
+            }, 300);
+        }
+    });
+}
+
+window.addEventListener('scroll', fadeInSections);
+window.addEventListener('DOMContentLoaded', fadeInSections);
