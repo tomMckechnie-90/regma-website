@@ -1,7 +1,10 @@
 const cards = document.querySelectorAll('.card-slide');
 
+
+
 // Why Choose regma section (Index.html)
 document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth < 1024) return;
     const section = document.querySelector('.animate-section')
     if (!section) {
         // console.log('No. .animate-section found.')
@@ -57,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Card Animation (Index.html)
 function animateCards() {
+    if (window.innerWidth < 1024) return;
     const cardSection = document.querySelector('.card-section') // Select the grid container with cards
     if (!cardSection) {
         // console.log('No .card-section found.');
@@ -88,6 +92,7 @@ window.addEventListener('DOMContentLoaded', animateCards);
 
 // Animate case study section (Case-study.html)
 function animateCaseStudySection() {
+    if (window.innerWidth < 1024) return;
     const caseStudySection = document.querySelector('.case-study-section');
 
     if (!caseStudySection) {
@@ -146,8 +151,9 @@ function animateCaseStudySection() {
 window.addEventListener('scroll', animateCaseStudySection);
 window.addEventListener('DOMContentLoaded', animateCaseStudySection);
 
-// Animations for sliding in from the left or right
+// Animations for sliding in from the left or right (desktop)
 function animatedSections() {
+    if (window.innerWidth < 1024) return;
     const slideInSection = document.querySelectorAll('.slide-in-sections');
     console.log('slideInSection NodeList:', slideInSection);
     if (!slideInSection.length) {
@@ -184,9 +190,9 @@ function animatedSections() {
             // slide in from the right
             setTimeout(() => {
                 if (slideRight) {
-                slideRight.classList.remove('opacity-0', 'translate-x-8');
-                slideRight.classList.add('opacity-100', 'translate-x-0');
-                console.log('slide in right animated.');
+                    slideRight.classList.remove('opacity-0', 'translate-x-8');
+                    slideRight.classList.add('opacity-100', 'translate-x-0');
+                    console.log('slide in right animated.');
                 }
             }, 600);
         }
@@ -196,11 +202,13 @@ function animatedSections() {
 window.addEventListener('scroll', animatedSections);
 window.addEventListener('DOMContentLoaded', animatedSections);
 
+
 // Fade in Animations (Desktop)
 function fadeInSections() {
+    if (window.innerWidth < 1024) return;
     const fadeInSections = document.querySelectorAll('.fade-in-section');
     console.log('fadeInSections NodeList:', fadeInSections);
-    if(!fadeInSections.length) {
+    if (!fadeInSections.length) {
         console.log('Fade in animation not found');
         return;
     }
@@ -213,11 +221,11 @@ function fadeInSections() {
 
         const rect = section.getBoundingClientRect();
 
-        if (rect.top < window.innerHeight -100){
+        if (rect.top < window.innerHeight - 100) {
             section.classList.add('animated');
-            
 
-            setTimeout (() => {
+
+            setTimeout(() => {
                 if (fadeIn) {
                     fadeIn.classList.remove('opacity-0');
                     fadeIn.classList.add('opacity-100');
@@ -230,3 +238,25 @@ function fadeInSections() {
 
 window.addEventListener('scroll', fadeInSections);
 window.addEventListener('DOMContentLoaded', fadeInSections);
+
+// Fade in Animation (Mobile)
+function fadeInOnMobile() {
+    if (window.innerWidth > 1024) return; // Will not run of the screen width is wider than 1024px
+    const mobileAnimation = document.querySelectorAll('.fade-in-mobile');
+    console.log('fadeInOnMobile NodeList:', mobileAnimation);
+
+    // Loops through each element in the mobileAnimation NodeList
+    mobileAnimation.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100 && !element.classList.contains('mobile-animated')) {
+            element.classList.remove('opacity-0');
+            element.classList.remove('translate-x-8');
+            element.classList.remove('-translate-x-8');
+            element.classList.add('opacity-100', 'mobile-animated');
+            element.classList.add('translate-x-0');
+        }
+    });
+}
+
+window.addEventListener('scroll', fadeInOnMobile);
+window.addEventListener('DOMContentLoaded', fadeInOnMobile);
