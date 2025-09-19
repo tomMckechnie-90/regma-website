@@ -77,15 +77,17 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="relative flex items-center justify-center text-center px-6 py-32 md:py-48">
+        <section class="relative flex items-center justify-center text-center px-6 py-48 fade-in-section">
 
             <div class="absolute inset-0 z-0">
-                <img src="assets/images/services-hero(2).png" alt="A modern and professional web design workspace"
-                    class="w-full h-full object-cover">
+                <video class="w-full h-full object-cover" src="assets/videos/Services_Hero.webm"
+                    autoplay muted playsinline>
+                </video>
                 <div class="absolute inset-0 bg-black/60"></div> <!-- Dark Overlay -->
             </div>
-            <div class="relative z-10 container mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold text-[var(--regma-accent)] leanding-tight mb-4">
+            <div id="service-hero-content"
+                class="relative z-10 container mx-auto opacity-0 transition-all duration-700 fade-in fade-in-mobile">
+                <h1 class="text-4xl lg:text-6xl font-bold text-[var(--regma-accent)] leanding-tight mb-4">
                     Simple, All-in-one Pricing
                 </h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
@@ -109,7 +111,8 @@
         <section class="lg:pb-20 pb-10 bg-[var(--regma-bg-dark-secondary)] px-6 slide-in-sections">
             <div class="container mx-auto grid lg:grid-cols-2 gap-8 max-w-5xl">
                 <!-- Signature Package -->
-                <div class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-gray-700 relative overflow-hidden opacity-0 -translate-x-8 transition-all duration-700 slide-left fade-in-mobile">
+                <div
+                    class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-gray-700 relative overflow-hidden opacity-0 -translate-x-8 transition-all duration-700 slide-left fade-in-mobile">
                     <!-- discount label -->
                     <div
                         class="absolute top-0 left-0 bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold text-sm py-1 px-8 transform -rotate-45 -translate-x-8 translate-y-4">
@@ -176,7 +179,8 @@
                 </div>
 
                 <!-- E-commerce package v1 -->
-                <div class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-[var(--regma-accent)] relative overflow-hidden opacity-0 translate-x-8 transition-all duration-700 slide-right fade-in-mobile">
+                <div
+                    class="bg-[var(--regma-bg-dark)] rounded-lg p-8 flex flex-col border-2 border-[var(--regma-accent)] relative overflow-hidden opacity-0 translate-x-8 transition-all duration-700 slide-right fade-in-mobile">
                     <!-- Discount Label (temp) -->
                     <div
                         class="absolute top-0 left-0 bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold text-sm py-1 px-8 transform -rotate-45 -translate-x-8 translate-y-4">
@@ -187,10 +191,10 @@
                             class="mx-auto bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold py-2 px-5 rounded-full shadow-lg"
                             aria-label="Play audio introduction from Tom" type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="lg:size-5 size-3">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                    </svg>
+                                stroke="currentColor" class="lg:size-5 size-3">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                            </svg>
                         </button>
                     </div>
                     <h3 class="text-3xl font-bold text-white text-center mb-2">E-commerce Package</h3>
@@ -243,7 +247,8 @@
         <section class="lg:pt-36 pt-16 lg:pb-30 pb-20 px-4 slide-in-sections">
             <div class="container mx-auto text-center flex flex-col lg:flex-row-reverse gap-12">
                 <!-- Col 1 -->
-                <div class="w-full lg:w-1/2 lg:mt-6 lg:mb-0 opacity-0 translate-x-8 transition-all duration-700 care-package-text slide-right fade-in-mobile">
+                <div
+                    class="w-full lg:w-1/2 lg:mt-6 lg:mb-0 opacity-0 translate-x-8 transition-all duration-700 care-package-text slide-right fade-in-mobile">
                     <h2 class="lg:text-4xl text-3xl font-bold text-[var(--regma-accent)] mb-4">Our Maintenance Package
                     </h2>
                     <p class="lg:text-xl text-lg text-gray-400 mb-6">Maintenance & Security, so you can focus on your
@@ -269,7 +274,8 @@
                         importantly secure month after month.</p>
                 </div>
                 <!-- Col 2 -->
-                <div class="w-full lg:w-1/2 opacity-0 -translate-x-8 transition-all duration-700 slide-left fade-in-mobile">
+                <div
+                    class="w-full lg:w-1/2 opacity-0 -translate-x-8 transition-all duration-700 slide-left fade-in-mobile">
                     <div
                         class="bg-[var(--regma-bg-dark-secondary)] p-8 rounded-lg border-2 border-[var(--regma-accent)]">
                         <h3 class="text-3xl font-bold mb-4">Regma Care Package</h3>
@@ -437,6 +443,7 @@
 
     <!-- Menu JavaScript -->
     <script src="assets/js/menu.js"></script>
+    <!-- Fade in and Slide in Animations -->
     <script src="assets/js/animation.js"></script>
 </body>
 

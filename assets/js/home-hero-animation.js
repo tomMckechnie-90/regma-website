@@ -3,8 +3,8 @@ if (sessionStorage.getItem('heroAnimated')) {
     // if yes, skip animation
     document.getElementById('main-nav').classList.remove('hidden', 'opacity-0');
     document.getElementById('main-nav').classList.add('opacity-100');
-    document.getElementById('hero-content').classList.remove('hidden', 'opacity-0');
-    document.getElementById('hero-content').classList.add('opacity-100');
+    document.getElementById('main-hero-content').classList.remove('hidden', 'opacity-0');
+    document.getElementById('main-hero-content').classList.add('opacity-100');
     document.body.style.overflow = '';
 } else {
     // If the above is false, run the animation.
@@ -14,8 +14,8 @@ if (sessionStorage.getItem('heroAnimated')) {
 
         // Get the elements from hero and nav
         const nav = document.getElementById('main-nav');
-        const heroContent = document.getElementById('hero-content');
-        const heroVideo = document.getElementById('hero-video');
+        const heroContent = document.getElementById('main-hero-content');
+        const heroVideo = document.getElementById('main-hero-video');
 
         // Make sure the nav and hero content are hidden (in case user reloads mid-animation)
         nav.classList.add('hidden', 'opacity-0');
@@ -46,3 +46,4 @@ if (sessionStorage.getItem('heroAnimated')) {
         });
     });
 }
+

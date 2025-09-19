@@ -632,6 +632,9 @@
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
+  .py-26 {
+    padding-block: calc(var(--spacing) * 26);
+  }
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
