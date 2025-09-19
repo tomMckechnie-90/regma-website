@@ -199,6 +199,9 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .invisible {
+    visibility: hidden;
+  }
   .sr-only {
     position: absolute;
     width: 1px;
@@ -629,6 +632,9 @@
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
+  .py-38 {
+    padding-block: calc(var(--spacing) * 38);
+  }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
@@ -1039,6 +1045,11 @@
   .lg\:py-32 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 32);
+    }
+  }
+  .lg\:py-48 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 48);
     }
   }
   .lg\:pt-36 {
