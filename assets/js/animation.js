@@ -260,3 +260,37 @@ function fadeInOnMobile() {
 
 window.addEventListener('scroll', fadeInOnMobile);
 window.addEventListener('DOMContentLoaded', fadeInOnMobile);
+
+function herofadeInSections() {
+    const herofadeInSections = document.querySelectorAll('.hero-fade-in-section');
+    console.log('herofadeInSections NodeList:', herofadeInSections);
+    if (!herofadeInSections.length) {
+        console.log('Fade in animation not found');
+        return;
+    }
+    herofadeInSections.forEach(section => {
+        if (section.classList.contains('animated')) {
+            return;
+        }
+
+        const herofadeIn = section.querySelector('.hero-fade-in');
+
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight - 100) {
+            section.classList.add('animated');
+
+
+            setTimeout(() => {
+                if (herofadeIn) {
+                    herofadeIn.classList.remove('opacity-0');
+                    herofadeIn.classList.add('opacity-100');
+                    console.log('Hero fade in animated.');
+                }
+            }, 500);
+        }
+    });
+}
+
+window.addEventListener('scroll', herofadeInSections);
+window.addEventListener('DOMContentLoaded', herofadeInSections);
