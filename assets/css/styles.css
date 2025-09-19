@@ -635,6 +635,9 @@
   .py-38 {
     padding-block: calc(var(--spacing) * 38);
   }
+  .py-48 {
+    padding-block: calc(var(--spacing) * 48);
+  }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
