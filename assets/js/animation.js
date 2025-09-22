@@ -1,6 +1,15 @@
 const cards = document.querySelectorAll('.card-slide');
 
+// sales banner close button logic
+document.addEventListener('DOMContentLoaded', function () {
+    const banner = document.querySelector('.sales-banner');
+    const closeBtn = document.getElementById('close-banner');
 
+    closeBtn.addEventListener('click', function () {
+        banner.classList.remove('opacity-100', 'translate-0');
+        banner.classList.add('opacity-0', 'translate-y-8', 'hidden');
+    });
+});
 
 // Why Choose regma section (Index.html)
 document.addEventListener("DOMContentLoaded", function () {

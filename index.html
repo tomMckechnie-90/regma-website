@@ -44,7 +44,7 @@
             </div>
         </nav>
         <!-- Launch Sale Banner -->
-        <div class="bg-[var(--regma-bg-dark)] text-center p-2">
+        <div class="bg-[var(--regma-bg-dark)] text-center p-2 flex items-center justify-center relative sales-banner opacity-100 translate-y-0 transition-all duration-700">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="lg:size-6 size-4 inline-block text-[var(--regma-accent)]">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -52,6 +52,7 @@
             </svg>
             <a href="services.html" class="underline font-bold lg:text-sm text-xs">Launch Offer: Get 25% OFF Your New
                 Website Today!</a>
+                <button id="close-banner" aria-label="Close sales banner" class="absolute right-2 top-1 font-bold text-[var(--regma-accent)] bg-transparent border-none lg:text-3xl">&times;</button>
         </div>
 
         <!-- Off-canvas Menu -->
@@ -112,7 +113,7 @@
                 </a>
 
                 <!-- Audio Playback Button -->
-                <div class="flex justify-center mt-4">
+                <!-- <div class="flex justify-center mt-4">
                     <button
                         class="mx-auto bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold py-2 px-5 rounded-full shadow-lg"
                         aria-label="Play audio introduction from Tom" type="button">
@@ -122,7 +123,7 @@
                                 d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
                         </svg>
                     </button>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- Services Overview -->
@@ -237,7 +238,7 @@
                 </div>
                 <!-- Project -->
                 <div
-                    class="w-full lg:w-1/2 text-center med:text-left opacity-0 -translate-x-8 transition-all duration-700 slide-left fade-in-mobile">
+                    class="w-full lg:w-1/2 text-center lg:text-left opacity-0 -translate-x-8 transition-all duration-700 slide-left fade-in-mobile">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--regma-accent)]">
                         Featured Project: Broomsticks
                     </h2>
@@ -291,7 +292,7 @@
             </div>
         </section>
         <!-- Audio Playback Button -->
-        <div class="flex justify-end sticky bottom-0 lg:mr-3 mb-3">
+        <!-- <div class="flex justify-end sticky bottom-0 lg:mr-3 mb-3">
             <div>
                 <button
                     class="mx-auto bg-[var(--regma-accent)] text-[var(--regma-text-dark)] font-bold py-2 px-5 rounded-full shadow-lg"
@@ -303,7 +304,7 @@
                     </svg>
                 </button>
             </div>
-        </div>
+        </div> -->
     </main>
     <footer class="bg-[var(--regma-bg-dark-secondary)] border-t border-gray-700">
         <div class="container mx-auto px-6 py-10">
