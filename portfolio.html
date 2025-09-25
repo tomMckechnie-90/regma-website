@@ -63,11 +63,12 @@
 </head>
 
 <body>
-    <header class="bg-[var(--regma-bg-dark-secondary)] sticky top-0 z-50 shadow-lg">
+    <header id="main-nav"
+        class="hidden opacity-0 transition-opacity duration-700 bg-[var(--regma-bg-dark-secondary)] sticky top-0 z-50 shadow-lg">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
             <div>
-                <a href="index.html"><img src="assets/images/logo.png" alt="Regma Web Design Logo"
+                <a href="index.html"><img src="assets/images/new-logo.png" alt="Regma Web Design Logo"
                         class="h-12 w-auto"></a>
             </div>
 
@@ -88,7 +89,8 @@
             </div>
             <!-- Hamburger Button (Mobile) -->
             <div class="md:hidden">
-                <button id="menu-open-btn" class="text-white">
+                <!-- Open menu button -->
+                <button id="menu-open-btn" class="text-white" aria-label="Open main menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -97,6 +99,19 @@
                 </button>
             </div>
         </nav>
+        <!-- Launch Sale Banner -->
+        <div
+            class="bg-[var(--regma-bg-dark)] text-center p-2 flex items-center justify-center relative sales-banner opacity-100 translate-y-0 transition-all duration-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="lg:size-6 size-4 inline-block text-[var(--regma-accent)]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+            </svg>
+            <a href="services.html" class="underline font-bold lg:text-sm text-xs">Launch Offer: Get 25% OFF Your New
+                Website Today!</a>
+            <button id="close-banner" aria-label="Close sales banner"
+                class="absolute right-2 top-1 font-bold text-[var(--regma-accent)] bg-transparent border-none lg:text-3xl">&times;</button>
+        </div>
 
         <!-- Off-canvas Menu -->
         <div id="mobile-menu"
@@ -106,7 +121,8 @@
                 <!-- Menu Header -->
                 <div class="flex justify-between items-center mb-8">
                     <h2 class="text-white font-bold text-xl">Menu</h2>
-                    <button id="menu-close-btn" class="text-white">
+                    <!-- Close button -->
+                    <button id="menu-close-btn" class="text-white" aria-label="Close main menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -215,7 +231,7 @@
             <div class="grid lg:grid-cols-3 gap-8 text-center">
                 <div class="space-x-4">
                     <div>
-                        <h5 class="text-lg font-bold text-white">Get in touch</h5>
+                        <h2 class="text-lg font-bold text-white">Get in touch</h2>
                         <a href="mailto:thomas@regmawebdesign.co.uk"
                             class="text-gray-400 hover:text-white">thomas@regmawebdesign.co.uk</a>
                         <br>
@@ -224,7 +240,7 @@
                 </div>
                 <!-- Col 2 -->
                 <div>
-                    <h5 class="text-lg font-bold text-white mb-2">Quick Links</h5>
+                    <h2 class="text-lg font-bold text-white mb-2">Quick Links</h2>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="index.html" class="hover:text-white transition">Home</a></li>
                         <li><a href="services.html" class="hover:text-white transition">Services</a></li>
@@ -236,7 +252,7 @@
 
                 <!-- Col 3 -->
                 <div>
-                    <h5 class="text-lg font-bold text-white mb-2">Connect</h5>
+                    <h2 class="text-lg font-bold text-white mb-2">Connect</h2>
                     <div class="flex space-x-4 justify-center">
 
                         <!-- Facebook -->
@@ -271,7 +287,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center text-gray-500 mt-8 pt-6 border-t border-gray-700">
+            <div class="text-center text-white mt-8 pt-6 border-t border-gray-700">
                 <p class="text-sm">&copy; 2025 Regma Web Design. All Rights Reserved</p>
             </div>
         </div>
