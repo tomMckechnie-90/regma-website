@@ -772,6 +772,18 @@
     --tw-tracking: var(--tracking-tighter);
     letter-spacing: var(--tracking-tighter);
   }
+  .text-\[var\(\)\] {
+    color: var();
+  }
+  .text-\[var\(--\)\] {
+    color: var(--);
+  }
+  .text-\[var\(--reg\)\] {
+    color: var(--reg);
+  }
+  .text-\[var\(--regma\)\] {
+    color: var(--regma);
+  }
   .text-\[var\(--regma-accent\)\] {
     color: var(--regma-accent);
   }
