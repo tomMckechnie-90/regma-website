@@ -2,41 +2,42 @@
 <html lang="en">
 
 <head>
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="assets/css/styles.css" rel="stylesheet">
-        <title>Regma Web Design | Thank you</title>
-        <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1338222387916301');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1338222387916301&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <title>Regma Web Design | Thank you</title>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1338222387916301');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1338222387916301&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
 
 <body>
 
 
     <main>
-        <div class="container mx-auto mx-w-2xl text-center flex flex-col items-center mt-18">
+        <div class="container mx-auto max-w-2xl text-center flex flex-col items-center mt-16">
             <div class="bg-[var(--regma-accent)] inline-block p-4 rounded-full mb-6">
                 <svg class="w-12 h-12 text-[var(--regma-text-dark)]" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
+                <span class="sr-only">Success</span>
             </div>
 
             <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">Thank You!</h1>
@@ -44,7 +45,7 @@ src="https://www.facebook.com/tr?id=1338222387916301&ev=PageView&noscript=1"
                 and will get back to you within 24 hours.</p>
             <a href="index.html"
                 class="border-2 border-[var(--regma-accent)] text-[var(--regma-accent)] font-bold py-3 px-8 rounded-lg inline-block transition hover:scale-105">
-                Back to Homepage
+                Return to Home
             </a>
         </div>
     </main>
