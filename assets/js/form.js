@@ -19,8 +19,7 @@ if (contactForm) {
         }).then(response => {
             if (response.ok) {
                 form.reset();
-                window.location.href = '/regma-website/thank-you.html'; // For testing on git hub pages when pushed
-                // window.location.href = '/thank-you.html'; // for local testing on the live server
+                window.location.href = 'https://regmawebdesign.co.uk/thank-you.html';
             } else {
                 response.json().then(data => {
                     if (Object.hasOwn(data, 'errors')) {
